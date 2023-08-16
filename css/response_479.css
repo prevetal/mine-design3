@@ -14,33 +14,40 @@
         padding: 0 16px;
     }
 
-    header .menu_item > a{
+    header .menu_item > a
+    {
         text-align: right;
     }
 
-    header .menu_item:last-child > a{
+    header .menu_item:last-child > a
+    {
         display: inline-block;
+
         width: auto;
         padding: 15px 40px;
     }
 
-    footer .cont{
+    footer .cont
+    {
         padding: 0 20px;
     }
 
-    footer .links + .links{
+    footer .links + .links
+    {
         margin-right: 20px;
     }
 
-  
 
-  
 
-    .text_block{
+
+
+    .text_block
+    {
         font-size: 18px;
     }
 
-    .services .service .thumb{
+    .services .service .thumb
+    {
         padding-bottom: 55%;
     }
 }
