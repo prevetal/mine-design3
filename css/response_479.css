@@ -1,0 +1,46 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 32px;
+    }
+
+
+    .cont
+    {
+        padding: 0 16px;
+    }
+
+    header .menu_item > a{
+        text-align: right;
+    }
+
+    header .menu_item:last-child > a{
+        display: inline-block;
+        width: auto;
+        padding: 15px 40px;
+    }
+
+    footer .cont{
+        padding: 0 20px;
+    }
+
+    footer .links + .links{
+        margin-right: 20px;
+    }
+
+  
+
+  
+
+    .text_block{
+        font-size: 18px;
+    }
+
+    .services .service .thumb{
+        padding-bottom: 55%;
+    }
+}

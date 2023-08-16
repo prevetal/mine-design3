@@ -1,0 +1,227 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title
+    {
+        font-size: 36px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .columns
+    {
+        column-gap: 0;
+        column-count: 1;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .item1
+    {
+        left: 20%;
+    }
+
+    .first_section .item2
+    {
+        right: 20%;
+    }
+
+    .first_section .item3
+    {
+        top: 62px;
+        left: -24px;
+    }
+
+    .first_section .item4
+    {
+        top: 62px;
+        right: -24px;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .row
+    {
+        margin-bottom: -16px;
+    }
+
+    .why_we .row > *
+    {
+        width: calc(50% - 20px);
+        margin-bottom: 16px;
+    }
+
+
+    .why_we .item .icon
+    {
+        margin-bottom: 7px;
+    }
+
+
+
+    /*------------------
+        Our services
+    ------------------*/
+    .our_services .service .images
+    {
+        width: 100%;
+        margin-bottom: 31px;
+    }
+
+
+    .our_services .service .images .name
+    {
+        font-size: 46px;
+    }
+
+
+    .our_services .service .data
+    {
+        width: 100%;
+
+        order: 2;
+    }
+
+
+
+    /*-------------
+        Clients
+    -------------*/
+    .clients .swiper
+    {
+        padding: 0 58px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .articles .swiper
+    {
+        padding-bottom: 51px;
+    }
+
+
+
+    /*------------------
+        Article head
+    -------------------*/
+    .article_head .page_title
+    {
+        font-size: 42px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .row
+    {
+        margin-left: 0;
+    }
+
+    .services .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .socials
+    {
+        display: none;
+    }
+
+
+    footer .logo
+    {
+        margin-bottom: 14px;
+    }
+
+
+    footer .col .socials
+    {
+        display: flex;
+
+        margin-bottom: auto;
+    }
+
+
+    footer .links
+    {
+        margin-left: 102px;
+    }
+
+    .our_services .service:nth-child(even) .data{
+        order:2;
+    }
+
+    .text_block .columns{
+        font-size: 18px;
+    }
+
+    .feedback .block_head .desc{
+        font-size: 18px;
+    }
+
+    .services .service .thumb{
+        padding-bottom: 35%;
+    }
+
+    .about_info .block_head{
+        text-align: center;
+    }
+
+    .about_info .block_head .title:after{
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .projects .project .desc{
+        font-size: 18px;
+    }
+
+    .text_about{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text_about_img{
+        order:-1;
+    }
+
+    .text_about_body {
+        padding-bottom: 20px;
+    }
+}
