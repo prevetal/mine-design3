@@ -39,6 +39,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Смена слов в первом блоке
+	let firstSection = document.querySelector('.first_section .title .swiper')
+
+	if (firstSection) {
+		const firstSectionSlider = new Swiper('.first_section .title .swiper', {
+			loop: false,
+			speed: 500,
+			spaceBetween: 0,
+			slidesPerView: 1,
+			direction: 'vertical',
+			allowTouchMove: false,
+			autoplay: {
+				delay: 1750,
+				disableOnInteraction: false
+			}
+		})
+
+		setTimeout(() => {
+			firstSectionSlider.autoplay.stop()
+		}, 6750)
+	}
+
+
 	// Our services
 	const ourServicesSliders = [],
 		ourServices = document.querySelectorAll('.our_services .images .swiper')
@@ -64,7 +87,13 @@ document.addEventListener('DOMContentLoaded', function () {
 				loadPrevNext: true
 			},
 			spaceBetween: 24,
-			slidesPerView: 1
+			slidesPerView: 1,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			}
 		}
 
 		ourServicesSliders.push(new Swiper('.our_services_s' + i, options))
@@ -203,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	if($(".gallery .swiper").length>0){
+	if($('.gallery .swiper').length > 0){
 		// Карусель изображений
 		const gallerySliders = [],
 			gallery = document.querySelectorAll('.gallery .swiper')
@@ -214,7 +243,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			let options = {
 				speed: 6000,
 				autoplay: {
-					delay: 1
+					delay: 1,
+					reverseDirection: el.classList.contains('reverse') ? true : false
 				},
 				loop: true,
 				slidesPerView:'auto',
@@ -237,6 +267,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			gallerySliders.push(new Swiper('.gallery_s' + i, options))
 		})
+
+		setTimeout(() => {
+			gallerySliders.forEach(el => {
+				el.autoplay.stop()
+			})
+		}, 100)
 	}
 
 
@@ -264,9 +300,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoStart: false,
 		}
 	})
-
-
-
 
 
 	// Моб. меню
@@ -317,6 +350,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			i++
 		}, step)
 	})
+
+
+	// Отправка формы "Have questions?"
+	$('.feedback form').submit(function(e) {
+		e.preventDefault()
+
+		// Показываем сообщение об успехе
+		$('.feedback .success').addClass('show')
+	})
+
+
+	// Анимация в первом блоке
+	setTimeout(() => $('.first_section .image img').addClass('reset'), 1000)
 })
 
 

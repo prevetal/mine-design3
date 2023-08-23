@@ -7,6 +7,7 @@
     :root
     {
         --font_size_title: 36px;
+        --font_size_title_small: 34px;
     }
 
 
@@ -155,13 +156,21 @@
     .page_head
     {
         margin-bottom: 28px;
-        padding: 28px 0 23px;
+        padding: 28px 0 24px;
     }
 
 
     .page_title
     {
         font-size: 40px;
+    }
+
+
+    .page_head .tags
+    {
+        font-size: 15px;
+
+        margin-top: 8px;
     }
 
 
@@ -201,7 +210,15 @@
     ----------------*/
     .block_head
     {
-        margin-bottom: 44px;
+        margin-bottom: 40px;
+    }
+
+
+    .block_head .title
+    {
+        line-height: 30px;
+
+        padding-bottom: 24px;
     }
 
 
@@ -257,55 +274,80 @@
     -------------------*/
     .first_section
     {
-        margin-bottom: 78px;
+        margin-bottom: 80px;
     }
 
 
     .first_section .cont
     {
-        padding-top: 143px;
+        padding-top: 128px;
     }
 
 
     .first_section .title
     {
-        font-size: 42px;
+        font-size: 44px;
+    }
+
+    .first_section .title .swiper
+    {
+        width: 237px;
+        height: 51px;
     }
 
 
     .first_section .desc
     {
-        margin-top: 17px;
+        font-size: 17px;
     }
 
 
     .first_section .items
     {
-        margin-top: 56px;
-        padding-top: 158px;
+        margin-top: 40px;
+        padding-top: 140px;
     }
 
 
     .first_section .item1
     {
-        left: 24%;
+        left: 22%;
     }
 
     .first_section .item2
     {
-        right: 24%;
+        right: 22%;
+    }
+
+    .first_section .item3
+    {
+        left: 0;
+    }
+
+    .first_section .item4
+    {
+        right: 0;
     }
 
     .first_section .item3,
     .first_section .item4
     {
-        top: 100px;
+        top: 120px;
     }
 
 
-    .first_section .img
+    .first_section .image
     {
-        width: 669px;
+        display: none;
+    }
+
+
+    .first_section .mob_img
+    {
+        display: block;
+
+        width: 668px;
+        margin-bottom: 0;
     }
 
 
@@ -315,13 +357,13 @@
     ------------*/
     .why_we
     {
-        margin-bottom: 90px;
+        margin-bottom: 80px;
     }
 
 
     .why_we .block_head
     {
-        margin-bottom: 26px;
+        margin-bottom: 28px;
     }
 
 
@@ -343,46 +385,92 @@
     }
 
 
+    .why_we .item .desc
+    {
+        font-size: 15px;
+
+        margin-top: 8px;
+    }
+
+
 
     /*------------------
         Our services
     ------------------*/
     .our_services
     {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
 
     .our_services .block_head
     {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 
 
     .our_services .list > * + *
     {
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
 
     .our_services .service .images
     {
-        width: calc(100% - 444px);
+        width: calc(100% - 400px);
+        padding: 32px 30px 42px 32px;
+    }
+
+    .our_services .service:nth-child(2n) .images
+    {
+        padding-right: 32px;
+        padding-left: 30px;
     }
 
 
     .our_services .service .images .name
     {
-        font-size: 42px;
-
-        bottom: -16px;
+        font-size: 36px;
+        line-height: 26px;
     }
 
 
     .our_services .service .data
     {
-        width: 420px;
-        padding-top: 0;
+        padding-top: 32px;
+    }
+
+
+    .our_services .service .data .name
+    {
+        font-size: 32px;
+    }
+
+
+    .our_services .service .desc
+    {
+        font-size: 16px;
+    }
+
+
+    .our_services .service .data
+    {
+        width: 400px;
+    }
+
+
+    .our_services .service .btn
+    {
+        padding: 14px 40px;
+    }
+
+
+    .our_services .service .images .swiper-horizontal > .swiper-pagination-bullets,
+    .our_services .service .images .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .our_services .service .images .swiper-pagination-custom,
+    .our_services .service .images .swiper-pagination-fraction
+    {
+        display: none;
     }
 
 
@@ -402,6 +490,24 @@
     .reviews .swiper-slide
     {
         width: 380px;
+    }
+
+
+    .reviews .clients
+    {
+        margin-top: 48px;
+    }
+
+
+    .reviews .all_link
+    {
+        margin-top: 48px;
+    }
+
+
+    .reviews .all_link a
+    {
+        padding: 16px 40px;
     }
 
 
@@ -537,13 +643,6 @@
     /*-----------
         Stats
     -----------*/
-    .stats
-    {
-        margin-bottom: 12px;
-        padding: 20px 0;
-    }
-
-
     .stats .row
     {
         margin-bottom: -20px;
@@ -552,7 +651,7 @@
 
     .stats .row > *
     {
-        /*width: auto;*/
+        width: calc(25% - 20px);
         margin-bottom: 20px;
         margin-left: 20px;
     }
@@ -561,6 +660,48 @@
     .stats .item .val
     {
         font-size: 48px;
+    }
+
+
+    .stats .item
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*-----------------
+        Information
+    -----------------*/
+    .information
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .information .data
+    {
+        padding: 24px;
+    }
+
+
+    .information .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .information .row > *
+    {
+        width: calc(33.333% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .information .bottom
+    {
+        font-size: 18px;
     }
 
 
@@ -574,25 +715,9 @@
     }
 
 
-    .services .row
-    {
-        margin-bottom: -40px;
-        margin-left: -40px;
-    }
-
-    .services .row > *
-    {
-        width: calc(50% - 40px);
-        margin-bottom: 40px;
-        margin-left: 40px;
-    }
-
-
     .services .service
     {
-        padding: 0;
-
-        border-radius: 0;
+        padding: 24px;
     }
 
 
@@ -602,13 +727,26 @@
     }
 
 
+    .services .service .text_block
+    {
+        font-size: 16px;
+    }
+
+
+    .services .service .tags
+    {
+        padding-top: 16px;
+    }
+
+
 
     /*----------------
         About info
     ----------------*/
     .about_info
     {
-        padding: 40px 0;
+        margin-bottom: 80px;
+        padding: 60px 0 0;
     }
 
 
@@ -620,15 +758,26 @@
     }
 
 
+    .about_info .item
+    {
+        font-size: 17px;
+    }
+
     .about_info .item + .item
     {
-        margin-top: 40px;
+        margin-top: 28px;
     }
 
 
     .about_info .image
     {
         display: none;
+    }
+
+
+    .about_info .logos
+    {
+        margin-top: 40px;
     }
 
 
@@ -642,31 +791,49 @@
     }
 
 
-    .projects .swiper-pagination
-    {
-        display: flex;
-    }
-
-
     .projects .project .thumb
     {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 40px;
+        width: calc(100% - 400px);
+        padding: 32px 30px 42px 32px;
     }
 
 
     .projects .project .data
     {
-        width: 100%;
-        padding: 0;
+        width: 400px;
+        padding-top: 32px;
     }
 
 
-    .projects .swiper-button-next,
+    .projects .project .desc
+    {
+        font-size: 16px;
+    }
+
+
+    .projects .project .tags
+    {
+        margin-top: 16px;
+    }
+
+
+    .projects .swiper-button-next
+    {
+        right: 430px;
+    }
+
     .projects .swiper-button-prev
     {
-        display: none;
+        right: 476px;
+    }
+
+
+    .projects .swiper-horizontal > .swiper-pagination-bullets,
+    .projects .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .projects .swiper-pagination-custom,
+    .projects .swiper-pagination-fraction
+    {
+        right: 524px;
     }
 
 
@@ -676,30 +843,38 @@
     ------------------*/
     .work_process
     {
-        margin-bottom: 60px;
-        padding: 40px 0;
+        margin-bottom: 80px;
+        padding: 60px 0;
     }
 
 
     .work_process .row
     {
-        margin-bottom: -40px;
-        margin-left: -40px;
+        margin-bottom: -32px;
+        margin-left: -32px;
     }
+
 
     .work_process .row > *
     {
-        width: calc(50% - 40px);
-        margin-bottom: 40px;
-        margin-left: 40px;
+        width: calc(50% - 32px);
+        margin-bottom: 32px;
+        margin-left: 32px;
     }
 
     .work_process .row > *:nth-child(2):before
     {
-        top: auto;
+        top: 100%;
         right: 0;
-        bottom: -16px;
+        bottom: auto;
         left: 0;
+
+        width: 52px;
+        height: 19px;
+
+        border-top: 19px solid #fff;
+        border-right: 26px solid transparent;
+        border-left: 26px solid transparent;
     }
 
     .work_process .row > *:nth-child(3)
@@ -710,9 +885,18 @@
     .work_process .row > *:nth-child(3):before
     {
         top: 0;
-        right: auto;
+        right: 100%;
         bottom: 0;
-        left: -16px;
+        left: auto;
+
+        width: 19px;
+        height: 52px;
+
+        transform: rotate(180deg);
+
+        border-top: 26px solid transparent;
+        border-bottom: 26px solid transparent;
+        border-left: 19px solid #fff;
     }
 
     .work_process .row > *:nth-child(4)
@@ -722,21 +906,37 @@
 
     .work_process .row > *:nth-child(4):before
     {
-        top: auto;
+        top: 100%;
         right: 0;
-        bottom: -16px;
+        bottom: auto;
         left: 0;
+
+        width: 52px;
+        height: 19px;
+
+        transform: none;
+
+        border-top: 19px solid #fff;
+        border-right: 26px solid transparent;
+        border-left: 26px solid transparent;
     }
 
     .work_process .row > *:nth-child(5):before
     {
-        right: -16px;
-        left: auto;
+        left: 100%;
+
+        transform: none;
     }
 
     .work_process .row > *:nth-child(6)
     {
         order: 6;
+    }
+
+
+    .work_process .item .name
+    {
+        font-size: 18px;
     }
 
 
@@ -746,7 +946,7 @@
     ------------*/
     .prices
     {
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
 
 
@@ -770,6 +970,18 @@
     }
 
 
+    .prices .item .name
+    {
+        font-size: 20px;
+    }
+
+
+    .prices .item .price .val
+    {
+        font-size: 30px;
+    }
+
+
 
     /*--------------
         Feedback
@@ -777,7 +989,6 @@
     .feedback
     {
         margin-bottom: 60px;
-        padding: 40px 0;
     }
 
 
@@ -799,13 +1010,41 @@
     }
 
 
+    .feedback .success
+    {
+        padding: 34px;
+
+        text-align: center;
+    }
+
+
+    .feedback .success .title
+    {
+        font-size: 30px;
+    }
+
+
+    .feedback .success .desc
+    {
+        font-size: 18px;
+    }
+
+
+    .feedback .qr_code
+    {
+        font-size: 18px;
+
+        padding: 32px 80px;
+    }
+
+
 
     /*-------------------
         Contacts info
     -------------------*/
     .contacts_info
     {
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
 
 
@@ -842,5 +1081,69 @@
         height: 433px;
         margin-top: 0;
         margin-left: auto;
+    }
+
+
+
+    /*--------------
+        About us
+    --------------*/
+    .about_us
+    {
+        padding: 60px 0;
+    }
+
+
+    .about_us .boss
+    {
+        width: 340px;
+        height: 348px;
+    }
+
+
+    .about_us .boss .name
+    {
+        font-size: 20px;
+
+        bottom: 28px;
+    }
+
+
+    .about_us .data
+    {
+        width: calc(100% - 368px);
+    }
+
+
+    .about_us .sugnature img
+    {
+        height: 64px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .swiper-slide
+    {
+        width: 168px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .socials a + a
+    {
+        margin-left: 24px;
+    }
+
+
+
+    footer .info .links + .links
+    {
+        margin-left: 80px;
     }
 }
